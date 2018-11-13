@@ -1,31 +1,20 @@
 language: generic
-
-
 dist: xenial
-
 sudo: required
-
-
-
 deploy:
-
+  provider: releases
+  api_key:
+    secure: gw/dY11ioViUusQ+lv2M/Ae+MEqwOk9RRF/+Rfgw3MhsYePcQHGeu+MEKelw2yNrYdWuOiU2xdyu+jPez+uf3hcx9T12Zqei8YA83F+OdNKD5mQUYA7f8m+7qvrcqr5hn+cwsUMBdV+7T8pjsDW/kHf6mWgS83jjlL9fTE1rPQUiZE/a6LISWItFrxMPwSQULHt+QGyTe3iHXi7n931VM+7VT+EA57z2D+kxtI895h9ZVuHsDMuUbdlhCQ0FSdfXPHwsdawrRTuJ4vxz8Bza4BNGVRvupy60Y6UChP4Iia1pNYEqt8D4jwscDyKSo4/H4roo2dozJbApjdbvAMhg9p6D9E3ucMe6U/wHhGy9TuiEvKs7QAYGnjjmBg2QfmR6eqbO+M1/1mUP6j/a/tQ1pbYze4G6Wg0TB93XPFIF8NXEYisGv7omPqMY8/QQGXa4nXfkIkN7fa+nJJ5/0L2N3AUpWn4Rs8q2pCYksjQbzhNwgxs+RXAsPisWaddKk71WIKHPLGijBc5H+4RkGWPpEEm5RdkqI0Q19xsYPKRcxTVbA3i+rmW/RMRBYm84EQbsocVsox/X9BDTYBSNpa32SM25hxQaD/UoZ2L+NAHDrIrHrLU1mcBiZ3A+LX/nGxBe7ODmvq2ksuNAJ4m8OBO/CsxUKWmd2HY67TSqsSi7I+k=
+  file: hello.sh
+  on:
+    repo: nikcbg/travis1
+    branch: travisbranch
 provider: releases
-
-api_key: 
-
-secure: 
-
+api_key:
+secure:
 file: hello.sh
-
-on:
-
+true:
 repo: nikcbg/travis1
-
 tags: true
-
-
-
 script:
-
 - bash test.sh
-
