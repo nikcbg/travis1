@@ -1,0 +1,16 @@
+language: generic
+dist: xenial
+sudo: required
+
+deploy:
+  provider: releases
+  api_key:
+    secure:
+  file: hello.sh
+  on:
+    repo: nikcbg/travis1
+    tags: true
+
+script:
+- bash test.sh
+
